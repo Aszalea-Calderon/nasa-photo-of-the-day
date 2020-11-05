@@ -1,5 +1,5 @@
 import React from "react";
-//import Post from "./posts.js"
+import Post from "./posts.js";
 import "./posts.css";
 
 const Posts = (props) => {
@@ -8,6 +8,12 @@ const Posts = (props) => {
   console.log(posts);
 
   //Export it out
-  return <div></div>;
+  return (
+    <div>
+      {posts.map((item) => {
+        return <Post post={item} likePost={likePost} />;
+      })}
+    </div>
+  );
 };
 export default Posts;
