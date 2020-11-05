@@ -1,13 +1,14 @@
 import React from "react";
 
-const nasaPost = ({ imageURL, title, explain }) => {
+const nasaPost = ({ photo, title, explain, date }) => {
   // const [setNasaPost] = setNasaPost.url;
 
   return (
     <div>
       <h1>NASA PHOTO OF THE DAY</h1>
       <h2>{title}</h2>
-      <img src={imageURL} alt="nasa image of the day" />
+      <p>{date}</p>
+      <img src={photo} alt="nasa image of the day" />
       <div>{explain}</div>
     </div>
   );

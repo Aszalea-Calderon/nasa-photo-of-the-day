@@ -11,6 +11,7 @@ function App() {
   const [url, setUrl] = useState();
   const [title, setTitle] = useState();
   const [explanation, setExplanation] = useState();
+  const [date, setDate] = useState();
 
   //Calling the Axios's
   useEffect(() => {
@@ -24,10 +25,12 @@ function App() {
         const imageUrl = res.data.url;
         const title = res.data.title;
         const explain = res.data.explanation;
+        const date = res.data.date;
 
         setUrl(imageUrl);
         setTitle(title);
         setExplanation(explain);
+        setDate(date);
 
         debugger;
       })
@@ -41,7 +44,12 @@ function App() {
 
   return (
     <div className="App">
-      <NasaPost imageUrl={url} title={title} explain={explanation} />
+      <NasaPost
+        imageUrl={url}
+        title={title}
+        explain={explanation}
+        date={date}
+      />
     </div>
   );
 }
