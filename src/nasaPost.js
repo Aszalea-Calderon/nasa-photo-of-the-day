@@ -14,7 +14,15 @@ const nasaPost = ({ photo, title, explain, date }) => {
       <h1>NASA PHOTO OF THE DAY</h1>
       <h2>{title}</h2>
       <p>{date}</p>
-      <img src={photo} alt="nasa image of the day" />
+
+      <iframe
+        width="800"
+        height="700"
+        src={photo}
+        type="video"
+        alt="nasa image of the day"
+      />
+
       <div>{explain}</div>
     </Styled>
   );
